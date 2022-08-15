@@ -1,5 +1,8 @@
-from winreg import REG_RESOURCE_REQUIREMENTS_LIST
+from pathlib import Path
+
 import yolov5
+from yolov5 import train, val, detect, export
+
 
 class ModelX():
     """Placeholder class for model x
@@ -20,7 +23,6 @@ class Yolo5():
         """
 
         self.model = yolov5.load('yolov5s.pt')
-        # set model parameters
         self.model.conf = 0.25  # NMS confidence threshold
         self.model.iou = 0.45  # NMS IoU threshold
         self.model.agnostic = False  # NMS class-agnostic
@@ -31,9 +33,12 @@ class Yolo5():
         """Train the model on a custom dataset
         """
 
-        #code this function
+        train.run(imgsz=640, data='coco128.yaml')
+        val.run(imgsz=640, data='coco128.yaml', weights='yolov5s.pt')
+        detect.run(imgsz=640)
+        export.run(imgsz=640, weights='yolov5s.pt')
 
-    def inference(self, image_url:str):
+    def inference(self, image_url:Path) -> list:
         """Get inferences for a selected image
 
         Args:
