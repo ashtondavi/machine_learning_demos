@@ -7,7 +7,7 @@ from demos.pipelines.base_pipeline import BasePipeline
 
 
 class ObjectDetection(BasePipeline):
-    """Placeholder class for a folder based ObjectDetection pipeline
+    """Class for a folder based ObjectDetection pipeline
     """
 
     def __init__(self):
@@ -33,9 +33,8 @@ class ObjectDetection(BasePipeline):
             path_images (str): Folder of images to process
         """
 
-
         self.set_model()
-        #self.model.train()
+        self.model.train_model()
         for file in os.listdir(path_images):
             print(file)
             path_image = pathlib.Path(path_images, file)

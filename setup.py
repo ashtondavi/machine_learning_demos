@@ -8,6 +8,6 @@ setuptools.setup(
     description='Python package of several machine learning demos',
     long_description=open('README.md').read(),
     packages=setuptools.find_packages(),
-    install_requires=["numpy>=1.23.1"],
+    install_requires=[],
     python_requires='>=3.7',
 )

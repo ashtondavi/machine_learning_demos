@@ -6,7 +6,7 @@ pipelines including image classification, object detection, and similarity
 models
 
 # Virtual environment setups (python 3.7 and latest)
-python -3.7-64 -m venv 37_env
+python -3.7-64 -m venv 3.7_env -> not working?
 python -m venv env
 
 # Usage
@@ -17,4 +17,5 @@ powershell.
 
 ## Commands to run pipelines from windows cmd or vscode
 
-python demos/pipelines/object_detection.py --folder "./example_data/images" 
+python demos/pipelines/object_detection.py --folder "./example_data/images"
+python demos/pipelines/classification.py --output "./classifier" --epochs "10" 
