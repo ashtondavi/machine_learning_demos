@@ -1,21 +1,23 @@
 
 # Overview
 
-This repository contains a python package for several machine learning demo 
-pipelines including image classification, object detection, and similarity 
-models
+This repository is a playpen area to work on some machine learning pipeline 
+demos for image classification and bounding box detection.
 
-# Virtual environment setups (python 3.7 and latest)
-python -3.7-64 -m venv 3.7_env -> not working?
-python -m venv env
+# Usage (from vscode)
 
-# Usage
+Set up a virtual environment by running "python -m venv .env"
 
-To run the pipelines install the packages from the repos base directory by
-by running "python setup.py install" in either the windows cmd or vscode 
-powershell.
+Switch the the virtual environment
+
+Install the demos packages from the repos base directory by running "pip install 
+-e ."
+
+copy and paste one of the commands below inot the powershell to run with 
+example data
+
 
 ## Commands to run pipelines from windows cmd or vscode
 
-python demos/pipelines/object_detection.py --folder "./example_data/images"
+python demos/pipelines/bbox_detection.py --folder "./example_data/images"
 python demos/pipelines/classification.py --output "./classifier" --epochs "10" 

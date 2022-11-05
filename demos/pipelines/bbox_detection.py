@@ -34,7 +34,7 @@ class ObjectDetection(BasePipeline):
         """
 
         self.set_model()
-        self.model.train_model()
+        #self.model.train_model()
         for file in os.listdir(path_images):
             print(file)
             path_image = pathlib.Path(path_images, file)

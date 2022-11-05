@@ -6,7 +6,7 @@ from pathlib import Path
 import json
 import yolov5
 from yolov5 import train, val, detect, export
-import tensorflow as tf
+#import tensorflow as tf
 
 
 class TensorflowClassification():
