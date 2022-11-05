@@ -1,1 +1,8 @@
 parameters.json
+.env*
+build*
+dist*
+classifier*
+runs*
+*.egg-info/
+*.pyc
